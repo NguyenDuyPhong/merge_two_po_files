@@ -3,8 +3,8 @@
 
 ob_start();
 // put some business here 
-$file = 'upload_files/tmp.po';  
-if(file_exists($file))
+// $TMP_FILENAME = '../web/upload_files/tmp.po';  
+if(file_exists(TMP_FILENAME))
 {
 	header('Content-Description: File Transfer');
 	header('Content-Type: application/octet-stream');
@@ -13,10 +13,10 @@ if(file_exists($file))
 	header('Expires: 0');
 	header('Cache-Control: must-revalidate');
 	header('Pragma: public');
-	header('Content-Length: ' . filesize($file));
+	header('Content-Length: ' . filesize(TMP_FILENAME));
 	ob_clean();
 
-	readfile($file); 
+	readfile(TMP_FILENAME); 
 	exit;
 }
 

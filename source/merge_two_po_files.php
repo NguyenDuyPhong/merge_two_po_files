@@ -111,20 +111,25 @@ class MergeTwoPoFile
 		
 		
 		// move_uploaded_file($fullName, 'upload_files/tmp.po');  
-		DEFINE('TMP_FILENAME', 'upload_files/tmp.po'); 
-		// $tmpFileName = ; 
-		file_put_contents(TMP_FILENAME, '');  // empty file PO  
-		$file = fopen(TMP_FILENAME, 'wb', 1);  
-		fwrite($file, $fileContent);  
-		fclose($file); 
-		
-		// //download to client  
-		
-		// header("Content-disposition: attachments;filename=merge_two_po_files.po");  
-		// header("Content-disposition: attachments;filename=merge_two_po_files.po");  
-		
-		require_once('download_to_client.php'); 
-		
+		DEFINE('TMP_FILENAME', '../web/upload_files/tmp.po');  // must-have encoded UTF8-without BOM  
+		if(file_exists(TMP_FILENAME))
+		{
+			// $tmpFileName = ; 
+			file_put_contents(TMP_FILENAME, '');  // empty file PO  
+			$file = fopen(TMP_FILENAME, 'wb', 1);  
+			fwrite($file, $fileContent);  
+			fclose($file); 
+			
+			// //download to client  
+			
+			// header("Content-disposition: attachments;filename=merge_two_po_files.po");  
+			// header("Content-disposition: attachments;filename=merge_two_po_files.po");  
+			
+			require_once('download_to_client.php');   
+		}
+		else{ 
+			echo '<br/>File not found: '. TMP_FILENAME; 
+		} 
 		  
 		return $fileContent; 
 		

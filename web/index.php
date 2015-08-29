@@ -23,7 +23,7 @@
 	
 	<!-- form action for merging files  -->
 	<!-- // http://stackoverflow.com/questions/10694050/how-does-one-upload-a-txt-file-in-php-and-have-it-read-line-by-line-on-another -->
-	<form action="merge_two_po_files.php" method="post" enctype="multipart/form-data" >
+	<form action="../source/merge_two_po_files.php" method="post" enctype="multipart/form-data" >
     <div class="row ">   
         <div class="col-md-12">
 			<hr class=""/>
