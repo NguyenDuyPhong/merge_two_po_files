@@ -11,6 +11,8 @@
     <div class="header">
 		<h1>Merge two PO files</h1>
         <p>Finding common line [msgid] in two files and replace [msgstr] the next line</p>    
+        <p>This's solution for the same problem, <a href="http://stackoverflow.com/questions/21567173/find-common-line-in-two-files-and-replace-the-next-line-of-first-file-with-the-n" target="_blank">see here </a> </p>    
+		
 	</div>
     <div class="row "> 
 		<div class="col-md-12">
