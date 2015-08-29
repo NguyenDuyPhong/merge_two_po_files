@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		 
 		<link rel="stylesheet" href="assets/bootstrap-3.3.2/css/bootstrap.css" />
+		<title>Merge two PO files</title>
     </head> 
 	<body>  
 	
